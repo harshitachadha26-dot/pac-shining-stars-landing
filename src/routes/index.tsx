@@ -4,12 +4,12 @@ import { Reveal } from "@/components/Reveal";
 import { IntelligenceWheel } from "@/components/IntelligenceWheel";
 import logoAsset from "@/assets/pac-logo.asset.json";
 import founderAsset from "@/assets/founder-bijal.asset.json";
-import galleryClassroom from "@/assets/gallery-classroom.jpg";
-import galleryArt from "@/assets/gallery-art.jpg";
-import galleryStage from "@/assets/gallery-stage.jpg";
-import galleryDance from "@/assets/gallery-dance.jpg";
-import galleryLibrary from "@/assets/gallery-library.jpg";
-import galleryMusic from "@/assets/gallery-music.jpg";
+import gallery1 from "@/assets/PAB6422-HDR.jpg.asset.json";
+import gallery2 from "@/assets/PAB6491-HDR.jpg.asset.json";
+import gallery3 from "@/assets/PAB6515-HDR.jpg.asset.json";
+import gallery4 from "@/assets/PAB6617-HDR.jpg.asset.json";
+import gallery5 from "@/assets/PAB6626-HDR.jpg.asset.json";
+import gallery6 from "@/assets/PAB6635-HDR.jpg.asset.json";
 
 const SITE_TITLE =
   "PAC Preschool & MIA Centre, Mulund | Multiple Intelligence Early Learning";
@@ -52,9 +52,7 @@ export const Route = createFileRoute("/")({
           },
           foundingDate: "2004",
           sameAs: [
-            "https://tr.ee/eVM_nwdCAQ",
-            "https://tr.ee/b9EkS2Zuav",
-            "https://tr.ee/umjQ5_HL-l",
+            "https://www.instagram.com/pac_preschool_daycare_micentre/",
           ],
         }),
       },
@@ -183,75 +181,68 @@ function Nav() {
 /* ------------------- HERO ------------------- */
 function HeroSection() {
   return (
-    <section id="top" className="relative overflow-hidden bg-hero-gradient pb-20 pt-28 md:pb-28 md:pt-36">
-      {/* floating illustrations */}
+    <section id="top" className="relative overflow-hidden bg-hero-gradient pb-16 pt-24 md:pb-24 md:pt-32">
       <FloatingShapes />
       <div className="container-pac relative">
         <Reveal>
-          <div className="mx-auto max-w-4xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-coral" /> Admissions Open · Mulund
-            </span>
-            <h1 className="mt-6 font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[68px]">
-              Helping Children Discover{" "}
-              <span className="text-gradient-brand">Where They Naturally Shine</span>, Through India's 8-Intelligence Approach
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              21 years of helping children in Mulund grow in confidence, creativity, movement, expression, and academics through India's Multiple Intelligence approach to early learning.
-            </p>
-            <p className="mx-auto mt-3 max-w-xl text-sm font-medium text-foreground/80">
-              Preschool admissions and Multiple Intelligence Activity (MIA) Program enrolments now open.
-            </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href="#enquiry"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]"
-              >
-                Explore Preschool Admission
-                <span className="transition group-hover:translate-x-1">→</span>
-              </a>
-              <a
-                href="#mia"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-card/70 px-7 py-3.5 text-sm font-semibold text-primary backdrop-blur transition hover:bg-card"
-              >
-                Explore MIA Activity Program
-              </a>
-            </div>
-          </div>
-        </Reveal>
-
-        <Reveal delay={120}>
-          <div className="relative mx-auto mt-14 max-w-5xl">
+          <div className="relative mx-auto max-w-5xl">
             <div className="absolute -inset-4 rounded-[2rem] bg-primary-gradient opacity-20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[1.75rem] border border-white/40 bg-black shadow-glow">
+            <div className="relative overflow-hidden rounded-[1.5rem] border border-white/40 bg-black shadow-glow sm:rounded-[1.75rem]">
               <div className="aspect-video">
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/NsXEC0vy1kQ?rel=0"
-                  title="A Day in the Life at PAC – Sneak Peek Into PAC Preschool and Activity Centre Mulund – children learning through play-way Multiple Intelligence method"
+                  title="A Day in the Life at PAC Preschool & MIA Centre, Mulund"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
               </div>
             </div>
-            <div className="mt-4 text-center text-sm text-muted-foreground">
-              ▶ A Day in the Life at PAC – Sneak Peek Into PAC
+          </div>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <div className="mx-auto mt-10 max-w-3xl text-center md:mt-14">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-[11px] font-medium uppercase tracking-widest text-primary backdrop-blur sm:text-xs">
+              <span className="h-1.5 w-1.5 rounded-full bg-coral" /> Admissions Open · Mulund
+            </span>
+            <h1 className="mt-5 font-display text-[32px] leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-6xl">
+              Discover Where Your Child{" "}
+              <span className="text-gradient-brand">Naturally Shines</span>
+            </h1>
+            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              21 years of Multiple Intelligence early learning in Mulund — Preschool & MIA Activity Program.
+            </p>
+            <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#enquiry"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary-gradient px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]"
+              >
+                Book a Free Campus Visit
+                <span className="transition group-hover:translate-x-1">→</span>
+              </a>
+              <a
+                href="#mia"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-card/70 px-6 py-3.5 text-sm font-semibold text-primary backdrop-blur transition hover:bg-card"
+              >
+                Explore MIA Program
+              </a>
             </div>
           </div>
         </Reveal>
 
         <Reveal delay={200}>
-          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {[
               ["21+", "Years in Mulund"],
               ["8", "Intelligences"],
               ["10–12", "MIA Activities"],
               ["1000s", "Happy Families"],
             ].map(([n, l]) => (
-              <div key={l} className="rounded-2xl border border-border bg-card/70 p-4 text-center backdrop-blur">
-                <div className="font-display text-2xl font-bold text-primary sm:text-3xl">{n}</div>
-                <div className="mt-1 text-xs text-muted-foreground sm:text-sm">{l}</div>
+              <div key={l} className="rounded-2xl border border-border bg-card/70 p-3 text-center backdrop-blur sm:p-4">
+                <div className="font-display text-xl font-bold text-primary sm:text-3xl">{n}</div>
+                <div className="mt-1 text-[11px] text-muted-foreground sm:text-sm">{l}</div>
               </div>
             ))}
           </div>
@@ -309,16 +300,10 @@ function FounderSection() {
               </p>
               <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-foreground/80">
                 <p>
-                  For over three decades, I have had the privilege of working with children and witnessing something remarkable—every child is gifted, but not every child learns, expresses, or shines in the same way.
+                  Every child is gifted — but no two children learn or shine the same way. I founded PAC in 2004 to give children the freedom to discover their own strengths through the Multiple Intelligence approach.
                 </p>
                 <p>
-                  When I founded PAC in 2004, my vision was simple: create a place where children are not measured only by academics, but are given the freedom to explore, discover, and develop their unique strengths. This vision led us to embrace the Multiple Intelligence approach, helping children grow through movement, creativity, language, music, social connection, logical thinking, self-awareness, and real-world experiences.
-                </p>
-                <p>
-                  At PAC, we believe childhood should be filled with curiosity, confidence, joy, and meaningful learning. Every classroom, activity, and interaction is designed to help children feel safe, valued, and inspired to become the best version of themselves.
-                </p>
-                <p>
-                  For the past 21 years, it has been our privilege to partner with families in Mulund and guide thousands of children on their early learning journey. We look forward to welcoming your child into the PAC family and helping them discover where they naturally shine.
+                  For 21 years, it has been our privilege to walk this journey with families in Mulund — and we'd love to welcome yours too.
                 </p>
               </div>
               <blockquote className="mt-6 rounded-2xl border-l-4 border-coral bg-cream/60 p-5 font-display text-lg italic text-foreground">
@@ -349,30 +334,10 @@ function FounderSection() {
 /* ------------------- PROBLEM ------------------- */
 function ProblemSection() {
   const cards = [
-    {
-      icon: "🔍",
-      title: "What is my child actually good at?",
-      body: "You see your child's personality forming, but with so many academic boxes to tick, it's hard to know where their natural spark really is.",
-      color: "bg-blush/50",
-    },
-    {
-      icon: "💸",
-      title: "What if I choose the wrong class?",
-      body: "Many parents keep shifting between preschools and activity classes hoping one will finally fit — losing time, money, and the child's interest.",
-      color: "bg-sunshine/40",
-    },
-    {
-      icon: "📚",
-      title: "Not too academic — but not random play either",
-      body: "You don't want your child pushed into academics too early, and you don't want directionless play. You want structure and purpose.",
-      color: "bg-sky/60",
-    },
-    {
-      icon: "🎤",
-      title: "Confident, expressive & active — not just exam-ready",
-      body: "Marks matter. But so does the ability to speak up, perform, connect, and feel proud of who they are.",
-      color: "bg-leaf/40",
-    },
+    { icon: "🔍", title: "Where does my child really shine?", body: "Hard to spot a natural spark amid endless academic checkboxes.", color: "bg-blush/50" },
+    { icon: "💸", title: "Which class is actually right?", body: "Hopping between schools and classes costs time, money — and interest.", color: "bg-sunshine/40" },
+    { icon: "📚", title: "Not too academic, not random play", body: "You want structure and purpose — without early-academic pressure.", color: "bg-sky/60" },
+    { icon: "🎤", title: "Confident & expressive, not just exam-ready", body: "Marks matter. So does speaking up, performing and self-belief.", color: "bg-leaf/40" },
   ];
   return (
     <section className="bg-cream/40 py-20 md:py-28">
@@ -419,10 +384,7 @@ function DifferenceSection() {
               Built on Howard Gardner's <span className="text-gradient-brand">Multiple Intelligence Theory</span> — Not Guesswork
             </h2>
             <p className="mt-5 text-muted-foreground">
-              Every child is intelligent in a different way — through language, music, movement, art, logic, social connection, self-awareness, or nature.
-            </p>
-            <p className="mt-3 text-muted-foreground">
-              At PAC, both our Preschool and Multiple Intelligence Activity (MIA) Program are designed around this philosophy. Instead of measuring children only through reading, writing, and numbers, PAC gives structured exposure across all 8 intelligence areas so parents can discover where their child naturally shines.
+              Every child is intelligent in their own way. PAC's Preschool and MIA Program give structured exposure across all 8 intelligence areas — so you can see where your child naturally shines.
             </p>
           </div>
         </Reveal>
@@ -578,12 +540,12 @@ function ProcessSection() {
 /* ------------------- GALLERY ------------------- */
 function GallerySection() {
   const items = [
-    { src: galleryStage, alt: "PAC Mulund preschool amphitheatre", span: "row-span-2" },
-    { src: galleryArt, alt: "Kids art room PAC preschool", span: "" },
-    { src: galleryClassroom, alt: "Multiple intelligence activity classroom Mulund", span: "row-span-2" },
-    { src: galleryDance, alt: "Dance and movement studio Mulund preschool", span: "row-span-2" },
-    { src: galleryLibrary, alt: "PAC library reading nook for kids Mulund", span: "" },
-    { src: galleryMusic, alt: "PAC music corner for early learning Mulund", span: "" },
+    { src: gallery4.url, alt: "PAC Mulund central amphitheatre and activity zones", span: "row-span-2" },
+    { src: gallery1.url, alt: "Kids gym, climbing wall and foam pit at PAC Mulund", span: "" },
+    { src: gallery5.url, alt: "Role-play houses — Hospital, Art Studio and more", span: "row-span-2" },
+    { src: gallery6.url, alt: "Pretend-play Kitchen, Supermarket and Salon zones", span: "row-span-2" },
+    { src: gallery2.url, alt: "PAC library, reading nook and Multiple Intelligence wall", span: "" },
+    { src: gallery3.url, alt: "PAC bright art and activity classroom in Mulund", span: "" },
   ];
   return (
     <section id="gallery" className="py-20 md:py-28">
@@ -973,9 +935,15 @@ function Footer() {
               21 years of nurturing young minds in Mulund through India's Multiple Intelligence approach. Helping every child discover where they naturally shine.
             </p>
             <div className="mt-6 flex gap-3">
-              <SocialIcon href="https://tr.ee/eVM_nwdCAQ" label="YouTube">▶</SocialIcon>
-              <SocialIcon href="https://tr.ee/b9EkS2Zuav" label="Facebook">f</SocialIcon>
-              <SocialIcon href="https://tr.ee/umjQ5_HL-l" label="Instagram">◎</SocialIcon>
+              <SocialIcon href="https://www.instagram.com/pac_preschool_daycare_micentre/" label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-4 w-4"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </SocialIcon>
+              <SocialIcon href="https://tr.ee/eVM_nwdCAQ" label="YouTube">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.76-1.77C18.25 5 12 5 12 5s-6.25 0-7.84.43A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.76 1.77C5.75 19 12 19 12 19s6.25 0 7.84-.43a2.5 2.5 0 0 0 1.76-1.77A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15V9l5 3z"/></svg>
+              </SocialIcon>
+              <SocialIcon href="https://tr.ee/b9EkS2Zuav" label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor" className="h-4 w-4"><path d="M22 12a10 10 0 1 0-11.56 9.88v-6.99H7.9V12h2.54V9.8c0-2.5 1.49-3.89 3.78-3.89 1.09 0 2.24.2 2.24.2v2.46h-1.26c-1.24 0-1.63.77-1.63 1.56V12h2.77l-.44 2.89h-2.33v6.99A10 10 0 0 0 22 12z"/></svg>
+              </SocialIcon>
             </div>
           </div>
           <div>
