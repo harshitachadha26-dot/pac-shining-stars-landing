@@ -183,75 +183,68 @@ function Nav() {
 /* ------------------- HERO ------------------- */
 function HeroSection() {
   return (
-    <section id="top" className="relative overflow-hidden bg-hero-gradient pb-20 pt-28 md:pb-28 md:pt-36">
-      {/* floating illustrations */}
+    <section id="top" className="relative overflow-hidden bg-hero-gradient pb-16 pt-24 md:pb-24 md:pt-32">
       <FloatingShapes />
       <div className="container-pac relative">
         <Reveal>
-          <div className="mx-auto max-w-4xl text-center">
-            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-xs font-medium uppercase tracking-widest text-primary backdrop-blur">
-              <span className="h-1.5 w-1.5 rounded-full bg-coral" /> Admissions Open · Mulund
-            </span>
-            <h1 className="mt-6 font-display text-4xl leading-[1.05] tracking-tight text-foreground sm:text-5xl md:text-6xl lg:text-[68px]">
-              Helping Children Discover{" "}
-              <span className="text-gradient-brand">Where They Naturally Shine</span>, Through India's 8-Intelligence Approach
-            </h1>
-            <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              21 years of helping children in Mulund grow in confidence, creativity, movement, expression, and academics through India's Multiple Intelligence approach to early learning.
-            </p>
-            <p className="mx-auto mt-3 max-w-xl text-sm font-medium text-foreground/80">
-              Preschool admissions and Multiple Intelligence Activity (MIA) Program enrolments now open.
-            </p>
-            <div className="mt-8 flex flex-col items-center justify-center gap-3 sm:flex-row">
-              <a
-                href="#enquiry"
-                className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]"
-              >
-                Explore Preschool Admission
-                <span className="transition group-hover:translate-x-1">→</span>
-              </a>
-              <a
-                href="#mia"
-                className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-card/70 px-7 py-3.5 text-sm font-semibold text-primary backdrop-blur transition hover:bg-card"
-              >
-                Explore MIA Activity Program
-              </a>
-            </div>
-          </div>
-        </Reveal>
-
-        <Reveal delay={120}>
-          <div className="relative mx-auto mt-14 max-w-5xl">
+          <div className="relative mx-auto max-w-5xl">
             <div className="absolute -inset-4 rounded-[2rem] bg-primary-gradient opacity-20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[1.75rem] border border-white/40 bg-black shadow-glow">
+            <div className="relative overflow-hidden rounded-[1.5rem] border border-white/40 bg-black shadow-glow sm:rounded-[1.75rem]">
               <div className="aspect-video">
                 <iframe
                   className="h-full w-full"
                   src="https://www.youtube.com/embed/NsXEC0vy1kQ?rel=0"
-                  title="A Day in the Life at PAC – Sneak Peek Into PAC Preschool and Activity Centre Mulund – children learning through play-way Multiple Intelligence method"
+                  title="A Day in the Life at PAC Preschool & MIA Centre, Mulund"
                   loading="lazy"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
               </div>
             </div>
-            <div className="mt-4 text-center text-sm text-muted-foreground">
-              ▶ A Day in the Life at PAC – Sneak Peek Into PAC
+          </div>
+        </Reveal>
+
+        <Reveal delay={120}>
+          <div className="mx-auto mt-10 max-w-3xl text-center md:mt-14">
+            <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/70 px-4 py-1.5 text-[11px] font-medium uppercase tracking-widest text-primary backdrop-blur sm:text-xs">
+              <span className="h-1.5 w-1.5 rounded-full bg-coral" /> Admissions Open · Mulund
+            </span>
+            <h1 className="mt-5 font-display text-[32px] leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-6xl">
+              Discover Where Your Child{" "}
+              <span className="text-gradient-brand">Naturally Shines</span>
+            </h1>
+            <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
+              21 years of Multiple Intelligence early learning in Mulund — Preschool & MIA Activity Program.
+            </p>
+            <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
+              <a
+                href="#enquiry"
+                className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary-gradient px-6 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]"
+              >
+                Book a Free Campus Visit
+                <span className="transition group-hover:translate-x-1">→</span>
+              </a>
+              <a
+                href="#mia"
+                className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-card/70 px-6 py-3.5 text-sm font-semibold text-primary backdrop-blur transition hover:bg-card"
+              >
+                Explore MIA Program
+              </a>
             </div>
           </div>
         </Reveal>
 
         <Reveal delay={200}>
-          <div className="mt-12 grid grid-cols-2 gap-4 sm:grid-cols-4">
+          <div className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4 sm:gap-4">
             {[
               ["21+", "Years in Mulund"],
               ["8", "Intelligences"],
               ["10–12", "MIA Activities"],
               ["1000s", "Happy Families"],
             ].map(([n, l]) => (
-              <div key={l} className="rounded-2xl border border-border bg-card/70 p-4 text-center backdrop-blur">
-                <div className="font-display text-2xl font-bold text-primary sm:text-3xl">{n}</div>
-                <div className="mt-1 text-xs text-muted-foreground sm:text-sm">{l}</div>
+              <div key={l} className="rounded-2xl border border-border bg-card/70 p-3 text-center backdrop-blur sm:p-4">
+                <div className="font-display text-xl font-bold text-primary sm:text-3xl">{n}</div>
+                <div className="mt-1 text-[11px] text-muted-foreground sm:text-sm">{l}</div>
               </div>
             ))}
           </div>
