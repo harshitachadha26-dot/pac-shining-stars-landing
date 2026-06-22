@@ -302,16 +302,10 @@ function FounderSection() {
               </p>
               <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-foreground/80">
                 <p>
-                  For over three decades, I have had the privilege of working with children and witnessing something remarkable—every child is gifted, but not every child learns, expresses, or shines in the same way.
+                  Every child is gifted — but no two children learn or shine the same way. I founded PAC in 2004 to give children the freedom to discover their own strengths through the Multiple Intelligence approach.
                 </p>
                 <p>
-                  When I founded PAC in 2004, my vision was simple: create a place where children are not measured only by academics, but are given the freedom to explore, discover, and develop their unique strengths. This vision led us to embrace the Multiple Intelligence approach, helping children grow through movement, creativity, language, music, social connection, logical thinking, self-awareness, and real-world experiences.
-                </p>
-                <p>
-                  At PAC, we believe childhood should be filled with curiosity, confidence, joy, and meaningful learning. Every classroom, activity, and interaction is designed to help children feel safe, valued, and inspired to become the best version of themselves.
-                </p>
-                <p>
-                  For the past 21 years, it has been our privilege to partner with families in Mulund and guide thousands of children on their early learning journey. We look forward to welcoming your child into the PAC family and helping them discover where they naturally shine.
+                  For 21 years, it has been our privilege to walk this journey with families in Mulund — and we'd love to welcome yours too.
                 </p>
               </div>
               <blockquote className="mt-6 rounded-2xl border-l-4 border-coral bg-cream/60 p-5 font-display text-lg italic text-foreground">
