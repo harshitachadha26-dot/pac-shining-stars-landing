@@ -578,12 +578,12 @@ function ProcessSection() {
 /* ------------------- GALLERY ------------------- */
 function GallerySection() {
   const items = [
-    { src: galleryStage, alt: "PAC Mulund preschool amphitheatre", span: "row-span-2" },
-    { src: galleryArt, alt: "Kids art room PAC preschool", span: "" },
-    { src: galleryClassroom, alt: "Multiple intelligence activity classroom Mulund", span: "row-span-2" },
-    { src: galleryDance, alt: "Dance and movement studio Mulund preschool", span: "row-span-2" },
-    { src: galleryLibrary, alt: "PAC library reading nook for kids Mulund", span: "" },
-    { src: galleryMusic, alt: "PAC music corner for early learning Mulund", span: "" },
+    { src: gallery4.url, alt: "PAC Mulund central amphitheatre and activity zones", span: "row-span-2" },
+    { src: gallery1.url, alt: "Kids gym, climbing wall and foam pit at PAC Mulund", span: "" },
+    { src: gallery5.url, alt: "Role-play houses — Hospital, Art Studio and more", span: "row-span-2" },
+    { src: gallery6.url, alt: "Pretend-play Kitchen, Supermarket and Salon zones", span: "row-span-2" },
+    { src: gallery2.url, alt: "PAC library, reading nook and Multiple Intelligence wall", span: "" },
+    { src: gallery3.url, alt: "PAC bright art and activity classroom in Mulund", span: "" },
   ];
   return (
     <section id="gallery" className="py-20 md:py-28">
