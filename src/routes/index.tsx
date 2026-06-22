@@ -336,30 +336,10 @@ function FounderSection() {
 /* ------------------- PROBLEM ------------------- */
 function ProblemSection() {
   const cards = [
-    {
-      icon: "🔍",
-      title: "What is my child actually good at?",
-      body: "You see your child's personality forming, but with so many academic boxes to tick, it's hard to know where their natural spark really is.",
-      color: "bg-blush/50",
-    },
-    {
-      icon: "💸",
-      title: "What if I choose the wrong class?",
-      body: "Many parents keep shifting between preschools and activity classes hoping one will finally fit — losing time, money, and the child's interest.",
-      color: "bg-sunshine/40",
-    },
-    {
-      icon: "📚",
-      title: "Not too academic — but not random play either",
-      body: "You don't want your child pushed into academics too early, and you don't want directionless play. You want structure and purpose.",
-      color: "bg-sky/60",
-    },
-    {
-      icon: "🎤",
-      title: "Confident, expressive & active — not just exam-ready",
-      body: "Marks matter. But so does the ability to speak up, perform, connect, and feel proud of who they are.",
-      color: "bg-leaf/40",
-    },
+    { icon: "🔍", title: "Where does my child really shine?", body: "Hard to spot a natural spark amid endless academic checkboxes.", color: "bg-blush/50" },
+    { icon: "💸", title: "Which class is actually right?", body: "Hopping between schools and classes costs time, money — and interest.", color: "bg-sunshine/40" },
+    { icon: "📚", title: "Not too academic, not random play", body: "You want structure and purpose — without early-academic pressure.", color: "bg-sky/60" },
+    { icon: "🎤", title: "Confident & expressive, not just exam-ready", body: "Marks matter. So does speaking up, performing and self-belief.", color: "bg-leaf/40" },
   ];
   return (
     <section className="bg-cream/40 py-20 md:py-28">
