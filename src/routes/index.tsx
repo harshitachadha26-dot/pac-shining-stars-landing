@@ -4,12 +4,12 @@ import { Reveal } from "@/components/Reveal";
 import { IntelligenceWheel } from "@/components/IntelligenceWheel";
 import logoAsset from "@/assets/pac-logo.asset.json";
 import founderAsset from "@/assets/founder-bijal.asset.json";
-import galleryClassroom from "@/assets/gallery-classroom.jpg";
-import galleryArt from "@/assets/gallery-art.jpg";
-import galleryStage from "@/assets/gallery-stage.jpg";
-import galleryDance from "@/assets/gallery-dance.jpg";
-import galleryLibrary from "@/assets/gallery-library.jpg";
-import galleryMusic from "@/assets/gallery-music.jpg";
+import gallery1 from "@/assets/PAB6422-HDR.jpg.asset.json";
+import gallery2 from "@/assets/PAB6491-HDR.jpg.asset.json";
+import gallery3 from "@/assets/PAB6515-HDR.jpg.asset.json";
+import gallery4 from "@/assets/PAB6617-HDR.jpg.asset.json";
+import gallery5 from "@/assets/PAB6626-HDR.jpg.asset.json";
+import gallery6 from "@/assets/PAB6635-HDR.jpg.asset.json";
 
 const SITE_TITLE =
   "PAC Preschool & MIA Centre, Mulund | Multiple Intelligence Early Learning";
