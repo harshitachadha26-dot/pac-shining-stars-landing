@@ -540,12 +540,12 @@ function ProcessSection() {
 /* ------------------- GALLERY ------------------- */
 function GallerySection() {
   const items = [
-    { src: gallery4.url, alt: "PAC Mulund central amphitheatre and activity zones", span: "row-span-2" },
-    { src: gallery1.url, alt: "Kids gym, climbing wall and foam pit at PAC Mulund", span: "" },
-    { src: gallery5.url, alt: "Role-play houses — Hospital, Art Studio and more", span: "row-span-2" },
-    { src: gallery6.url, alt: "Pretend-play Kitchen, Supermarket and Salon zones", span: "row-span-2" },
-    { src: gallery2.url, alt: "PAC library, reading nook and Multiple Intelligence wall", span: "" },
-    { src: gallery3.url, alt: "PAC bright art and activity classroom in Mulund", span: "" },
+    { src: gallery4.url, alt: "PAC Mulund central amphitheatre and activity zones" },
+    { src: gallery1.url, alt: "Kids gym, climbing wall and foam pit at PAC Mulund" },
+    { src: gallery5.url, alt: "Role-play houses — Hospital, Art Studio and more" },
+    { src: gallery6.url, alt: "Pretend-play Kitchen, Supermarket and Salon zones" },
+    { src: gallery2.url, alt: "PAC library, reading nook and Multiple Intelligence wall" },
+    { src: gallery3.url, alt: "PAC bright art and activity classroom in Mulund" },
   ];
   return (
     <section id="gallery" className="py-20 md:py-28">
@@ -562,18 +562,20 @@ function GallerySection() {
           </div>
         </Reveal>
         <Reveal delay={100}>
-          <div className="mt-12 grid auto-rows-[160px] grid-cols-2 gap-3 sm:auto-rows-[200px] sm:gap-4 md:grid-cols-4">
+          <div className="mt-12 grid grid-cols-2 gap-3 sm:gap-4 md:grid-cols-3">
             {items.map((it) => (
               <div
                 key={it.alt}
-                className={`group relative overflow-hidden rounded-2xl shadow-soft ${it.span}`}
+                className="group relative overflow-hidden rounded-2xl shadow-soft"
               >
-                <img
-                  src={it.src}
-                  alt={it.alt}
-                  loading="lazy"
-                  className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
-                />
+                <div className="aspect-[4/3] w-full overflow-hidden">
+                  <img
+                    src={it.src}
+                    alt={it.alt}
+                    loading="lazy"
+                    className="h-full w-full object-cover transition duration-700 group-hover:scale-110"
+                  />
+                </div>
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent p-3">
                   <p className="text-xs font-medium text-white opacity-0 transition group-hover:opacity-100">{it.alt}</p>
                 </div>
