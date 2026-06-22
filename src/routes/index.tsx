@@ -52,9 +52,7 @@ export const Route = createFileRoute("/")({
           },
           foundingDate: "2004",
           sameAs: [
-            "https://tr.ee/eVM_nwdCAQ",
-            "https://tr.ee/b9EkS2Zuav",
-            "https://tr.ee/umjQ5_HL-l",
+            "https://www.instagram.com/pac_preschool_daycare_micentre/",
           ],
         }),
       },
