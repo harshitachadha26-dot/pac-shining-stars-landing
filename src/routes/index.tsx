@@ -386,10 +386,7 @@ function DifferenceSection() {
               Built on Howard Gardner's <span className="text-gradient-brand">Multiple Intelligence Theory</span> — Not Guesswork
             </h2>
             <p className="mt-5 text-muted-foreground">
-              Every child is intelligent in a different way — through language, music, movement, art, logic, social connection, self-awareness, or nature.
-            </p>
-            <p className="mt-3 text-muted-foreground">
-              At PAC, both our Preschool and Multiple Intelligence Activity (MIA) Program are designed around this philosophy. Instead of measuring children only through reading, writing, and numbers, PAC gives structured exposure across all 8 intelligence areas so parents can discover where their child naturally shines.
+              Every child is intelligent in their own way. PAC's Preschool and MIA Program give structured exposure across all 8 intelligence areas — so you can see where your child naturally shines.
             </p>
           </div>
         </Reveal>
