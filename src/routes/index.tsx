@@ -1028,7 +1028,7 @@ function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-6 text-xs opacity-60 sm:flex-row">
           <p>© {new Date().getFullYear()} PAC – Potential Activity Centre, Mulund. All rights reserved.</p>
-          <p>Made with care for the children of Mulund ✨</p>
+          <p>{"\n"}</p>
         </div>
       </div>
     </footer>
