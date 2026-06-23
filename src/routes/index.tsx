@@ -193,9 +193,9 @@ function HeroSection() {
               <div className="aspect-video">
                 <iframe
                   className="h-full w-full"
-                  src="https://www.youtube.com/embed/NsXEC0vy1kQ?rel=0"
-                  title="A Day in the Life at PAC Preschool & MIA Centre, Mulund"
-                  loading="lazy"
+                  src="https://www.youtube.com/embed/NsXEC0vy1kQ?autoplay=1&mute=1&loop=1&playlist=NsXEC0vy1kQ&rel=0&modestbranding=1&playsinline=1"
+                  title="A Day in the Life at PAC Preschool, Daycare & MIA Centre, Mulund"
+                  loading="eager"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
