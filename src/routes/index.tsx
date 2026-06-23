@@ -76,6 +76,7 @@ function PacLanding() {
         <ProblemSection />
         <DifferenceSection />
         <PreschoolSection />
+        <DaycareSection />
         <MiaSection />
         <ProcessSection />
         <GallerySection />
