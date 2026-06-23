@@ -389,7 +389,7 @@ function ProblemSection() {
 /* ------------------- DIFFERENCE ------------------- */
 function DifferenceSection() {
   return (
-    <section className="py-20 md:py-28">
+    <section id="approach" className="py-20 md:py-28">
       <div className="container-pac">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
