@@ -450,6 +450,50 @@ function PreschoolSection() {
   );
 }
 
+/* ------------------- DAYCARE ------------------- */
+function DaycareSection() {
+  const features = [
+    { icon: "🛡️", title: "Safe, Supervised & Screen-Free", desc: "A calm, warm environment where your child feels truly at home." },
+    { icon: "🍱", title: "Meals, Naps & Routines Handled", desc: "Nutritious food, restful sleep and gentle daily care — taken care of." },
+    { icon: "🧠", title: "Same 8-Intelligence Enrichment", desc: "Never just 'minding' — your child keeps developing every single day." },
+    { icon: "📚", title: "Homework & School-Pickup Support", desc: "Reliable after-school care for older children, with help when they need it." },
+    { icon: "📲", title: "Regular Parent Updates", desc: "Photos and notes — so you always know how your child's day went." },
+  ];
+  return (
+    <section id="daycare" className="bg-blush/30 py-20 md:py-28">
+      <div className="container-pac">
+        <Reveal>
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-coral">PAC Daycare · Ages 1.5–8</span>
+            <h2 className="mt-3 font-display text-3xl text-foreground sm:text-4xl md:text-5xl">
+              Daycare That Cares — <span className="text-gradient-brand">And Keeps Developing Your Child</span>
+            </h2>
+            <p className="mt-5 text-muted-foreground">
+              A safe, warm second home for the children of working parents — where your child is looked after with love, and still grows across all 8 intelligences every single day.
+            </p>
+          </div>
+        </Reveal>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((f, i) => (
+            <Reveal key={f.title} delay={i * 60}>
+              <div className="h-full rounded-3xl border border-border bg-card p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-warm-gradient text-2xl text-coral-foreground shadow-soft">{f.icon}</div>
+                <h3 className="mt-5 font-display text-xl text-foreground">{f.title}</h3>
+                <p className="mt-2 leading-relaxed text-muted-foreground">{f.desc}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+          <a href="#enquiry" className="inline-flex items-center gap-2 rounded-full bg-primary-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]">
+            Book a Free Daycare Trial Day →
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 /* ------------------- MIA ------------------- */
 function MiaSection() {
   const features = [
