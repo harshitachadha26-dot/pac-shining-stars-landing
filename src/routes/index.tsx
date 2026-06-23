@@ -61,8 +61,8 @@ export const Route = createFileRoute("/")({
   component: PacLanding,
 });
 
-const PHONE = "+919967555555";
-const WHATSAPP = "919967555555";
+const PHONE = "+919157137917";
+const WHATSAPP = "919157137917";
 
 function PacLanding() {
   return (
