@@ -1007,8 +1007,8 @@ function Footer() {
           <div>
             <h3 className="font-display text-base font-semibold">Visit Us</h3>
             <ul className="mt-4 space-y-2 text-sm opacity-80">
-              <li>Mulund, Mumbai 400080</li>
-              <li>+91 99675 55555</li>
+              <li>Mulund West, Mumbai 400080</li>
+              <li>+91 91571 37917</li>
               <li>admissions@pacmulund.com</li>
               <li>Mon–Sat · 9 AM – 6 PM</li>
             </ul>
