@@ -38,10 +38,12 @@ export const Route = createFileRoute("/")({
           name: "PAC Preschool & MIA Centre",
           description: SITE_DESC,
           url: "/",
-          telephone: "+91-9967-555-555",
+          telephone: "+91-91571-37917",
           address: {
             "@type": "PostalAddress",
-            addressLocality: "Mulund",
+            streetAddress: "Mulund West",
+            addressLocality: "Mumbai",
+            postalCode: "400080",
             addressRegion: "Maharashtra",
             addressCountry: "IN",
           },
@@ -61,8 +63,8 @@ export const Route = createFileRoute("/")({
   component: PacLanding,
 });
 
-const PHONE = "+919967555555";
-const WHATSAPP = "919967555555";
+const PHONE = "+919157137917";
+const WHATSAPP = "919157137917";
 
 function PacLanding() {
   return (
@@ -74,6 +76,7 @@ function PacLanding() {
         <ProblemSection />
         <DifferenceSection />
         <PreschoolSection />
+        <DaycareSection />
         <MiaSection />
         <ProcessSection />
         <GallerySection />
@@ -102,8 +105,8 @@ function Nav() {
 
   const links = [
     { href: "#preschool", label: "Preschool" },
-    { href: "#mia", label: "MIA Program" },
-    { href: "#process", label: "How It Works" },
+    { href: "#daycare", label: "Daycare" },
+    { href: "#mia", label: "MIA Centre" },
     { href: "#gallery", label: "Campus" },
     { href: "#faq", label: "FAQs" },
   ];
@@ -191,9 +194,9 @@ function HeroSection() {
               <div className="aspect-video">
                 <iframe
                   className="h-full w-full"
-                  src="https://www.youtube.com/embed/NsXEC0vy1kQ?rel=0"
-                  title="A Day in the Life at PAC Preschool & MIA Centre, Mulund"
-                  loading="lazy"
+                  src="https://www.youtube.com/embed/NsXEC0vy1kQ?autoplay=1&mute=1&loop=1&playlist=NsXEC0vy1kQ&rel=0&modestbranding=1&playsinline=1"
+                  title="A Day in the Life at PAC Preschool, Daycare & MIA Centre, Mulund"
+                  loading="eager"
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                   allowFullScreen
                 />
@@ -208,11 +211,11 @@ function HeroSection() {
               <span className="h-1.5 w-1.5 rounded-full bg-coral" /> Admissions Open · Mulund
             </span>
             <h1 className="mt-5 font-display text-[32px] leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-              Discover Where Your Child{" "}
-              <span className="text-gradient-brand">Naturally Shines</span>
+              Help Your Child Discover Where They{" "}
+              <span className="text-gradient-brand">Naturally Shine</span>
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              21 years of Multiple Intelligence early learning in Mulund — Preschool & MIA Activity Program.
+              For 21 years, PAC has nurtured Mulund's children across all 8 intelligences — Preschool, Daycare & MIA Activity Centre, all under one roof.
             </p>
             <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <a
@@ -223,10 +226,10 @@ function HeroSection() {
                 <span className="transition group-hover:translate-x-1">→</span>
               </a>
               <a
-                href="#mia"
+                href="#preschool"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-card/70 px-6 py-3.5 text-sm font-semibold text-primary backdrop-blur transition hover:bg-card"
               >
-                Explore MIA Program
+                Explore Our Programs
               </a>
             </div>
           </div>
@@ -237,7 +240,7 @@ function HeroSection() {
             {[
               ["21+", "Years in Mulund"],
               ["8", "Intelligences"],
-              ["10–12", "MIA Activities"],
+              ["3", "Programs, One Campus"],
               ["1000s", "Happy Families"],
             ].map(([n, l]) => (
               <div key={l} className="rounded-2xl border border-border bg-card/70 p-3 text-center backdrop-blur sm:p-4">
@@ -440,6 +443,50 @@ function PreschoolSection() {
         <div className="mt-10 text-center">
           <a href="#enquiry" className="inline-flex items-center gap-2 rounded-full bg-primary-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]">
             Enquire About Preschool Admission →
+          </a>
+        </div>
+      </div>
+    </section>
+  );
+}
+
+/* ------------------- DAYCARE ------------------- */
+function DaycareSection() {
+  const features = [
+    { icon: "🛡️", title: "Safe, Supervised & Screen-Free", desc: "A calm, warm environment where your child feels truly at home." },
+    { icon: "🍱", title: "Meals, Naps & Routines Handled", desc: "Nutritious food, restful sleep and gentle daily care — taken care of." },
+    { icon: "🧠", title: "Same 8-Intelligence Enrichment", desc: "Never just 'minding' — your child keeps developing every single day." },
+    { icon: "📚", title: "Homework & School-Pickup Support", desc: "Reliable after-school care for older children, with help when they need it." },
+    { icon: "📲", title: "Regular Parent Updates", desc: "Photos and notes — so you always know how your child's day went." },
+  ];
+  return (
+    <section id="daycare" className="bg-blush/30 py-20 md:py-28">
+      <div className="container-pac">
+        <Reveal>
+          <div className="mx-auto max-w-3xl text-center">
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-coral">PAC Daycare · Ages 1.5–8</span>
+            <h2 className="mt-3 font-display text-3xl text-foreground sm:text-4xl md:text-5xl">
+              Daycare That Cares — <span className="text-gradient-brand">And Keeps Developing Your Child</span>
+            </h2>
+            <p className="mt-5 text-muted-foreground">
+              A safe, warm second home for the children of working parents — where your child is looked after with love, and still grows across all 8 intelligences every single day.
+            </p>
+          </div>
+        </Reveal>
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          {features.map((f, i) => (
+            <Reveal key={f.title} delay={i * 60}>
+              <div className="h-full rounded-3xl border border-border bg-card p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
+                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-warm-gradient text-2xl text-coral-foreground shadow-soft">{f.icon}</div>
+                <h3 className="mt-5 font-display text-xl text-foreground">{f.title}</h3>
+                <p className="mt-2 leading-relaxed text-muted-foreground">{f.desc}</p>
+              </div>
+            </Reveal>
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+          <a href="#enquiry" className="inline-flex items-center gap-2 rounded-full bg-primary-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]">
+            Book a Free Daycare Trial Day →
           </a>
         </div>
       </div>
@@ -734,9 +781,9 @@ function EnquirySection() {
               </p>
               <div className="mt-8 space-y-4">
                 {[
-                  ["📞", "Call us", "+91 99675 55555"],
+                  ["📞", "Call us", "+91 91571 37917"],
                   ["✉️", "Email", "admissions@pacmulund.com"],
-                  ["📍", "Visit", "Mulund, Mumbai, Maharashtra"],
+                  ["📍", "Visit", "Mulund West, Mumbai 400080"],
                   ["🕒", "Hours", "Mon–Sat · 9:00 AM – 6:00 PM"],
                 ].map(([i, l, v]) => (
                   <div key={l} className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 p-4 backdrop-blur">
@@ -952,7 +999,8 @@ function Footer() {
             <h3 className="font-display text-base font-semibold">Quick Links</h3>
             <ul className="mt-4 space-y-2 text-sm opacity-80">
               <li><a href="#preschool" className="hover:opacity-100">Preschool</a></li>
-              <li><a href="#mia" className="hover:opacity-100">MIA Program</a></li>
+              <li><a href="#daycare" className="hover:opacity-100">Daycare</a></li>
+              <li><a href="#mia" className="hover:opacity-100">MIA Activities</a></li>
               <li><a href="#faq" className="hover:opacity-100">FAQs</a></li>
               <li><a href="#enquiry" className="hover:opacity-100">Contact</a></li>
             </ul>
@@ -960,8 +1008,8 @@ function Footer() {
           <div>
             <h3 className="font-display text-base font-semibold">Visit Us</h3>
             <ul className="mt-4 space-y-2 text-sm opacity-80">
-              <li>Mulund, Mumbai 400080</li>
-              <li>+91 99675 55555</li>
+              <li>Mulund West, Mumbai 400080</li>
+              <li>+91 91571 37917</li>
               <li>admissions@pacmulund.com</li>
               <li>Mon–Sat · 9 AM – 6 PM</li>
             </ul>
