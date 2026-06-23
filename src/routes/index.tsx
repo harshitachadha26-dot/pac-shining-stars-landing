@@ -781,9 +781,9 @@ function EnquirySection() {
               </p>
               <div className="mt-8 space-y-4">
                 {[
-                  ["📞", "Call us", "+91 99675 55555"],
+                  ["📞", "Call us", "+91 91571 37917"],
                   ["✉️", "Email", "admissions@pacmulund.com"],
-                  ["📍", "Visit", "Mulund, Mumbai, Maharashtra"],
+                  ["📍", "Visit", "Mulund West, Mumbai 400080"],
                   ["🕒", "Hours", "Mon–Sat · 9:00 AM – 6:00 PM"],
                 ].map(([i, l, v]) => (
                   <div key={l} className="flex items-center gap-4 rounded-2xl border border-border bg-card/70 p-4 backdrop-blur">
