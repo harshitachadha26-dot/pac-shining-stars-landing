@@ -215,7 +215,7 @@ function HeroSection() {
               <span className="text-gradient-brand">Naturally Shine</span>
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              For 21 years, PAC has nurtured Mulund's children across all 8 intelligences — Preschool, Daycare & MIA Activity Centre, all under one roof.
+              For 21 years, PAC has nurtured Mulund's children across all 8 intelligences —confidence, creativity, movement, expression and academics — through India's Multiple Intelligence approach to early learning.    .
             </p>
             <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <a
@@ -1028,7 +1028,7 @@ function Footer() {
 
         <div className="mt-10 flex flex-col items-center justify-between gap-2 border-t border-white/10 pt-6 text-xs opacity-60 sm:flex-row">
           <p>© {new Date().getFullYear()} PAC – Potential Activity Centre, Mulund. All rights reserved.</p>
-          <p>Made with care for the children of Mulund ✨</p>
+          <p>{"\n"}</p>
         </div>
       </div>
     </footer>
