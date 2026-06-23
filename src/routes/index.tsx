@@ -210,11 +210,11 @@ function HeroSection() {
               <span className="h-1.5 w-1.5 rounded-full bg-coral" /> Admissions Open · Mulund
             </span>
             <h1 className="mt-5 font-display text-[32px] leading-[1.1] tracking-tight text-foreground sm:text-5xl md:text-6xl">
-              Discover Where Your Child{" "}
-              <span className="text-gradient-brand">Naturally Shines</span>
+              Help Your Child Discover Where They{" "}
+              <span className="text-gradient-brand">Naturally Shine</span>
             </h1>
             <p className="mx-auto mt-5 max-w-xl text-base leading-relaxed text-muted-foreground sm:text-lg">
-              21 years of Multiple Intelligence early learning in Mulund — Preschool & MIA Activity Program.
+              For 21 years, PAC has nurtured Mulund's children across all 8 intelligences — Preschool, Daycare & MIA Activity Centre, all under one roof.
             </p>
             <div className="mt-7 flex flex-col items-stretch justify-center gap-3 sm:flex-row sm:items-center">
               <a
@@ -225,10 +225,10 @@ function HeroSection() {
                 <span className="transition group-hover:translate-x-1">→</span>
               </a>
               <a
-                href="#mia"
+                href="#preschool"
                 className="inline-flex items-center justify-center gap-2 rounded-full border border-primary/30 bg-card/70 px-6 py-3.5 text-sm font-semibold text-primary backdrop-blur transition hover:bg-card"
               >
-                Explore MIA Program
+                Explore Our Programs
               </a>
             </div>
           </div>
@@ -239,7 +239,7 @@ function HeroSection() {
             {[
               ["21+", "Years in Mulund"],
               ["8", "Intelligences"],
-              ["10–12", "MIA Activities"],
+              ["3", "Programs, One Campus"],
               ["1000s", "Happy Families"],
             ].map(([n, l]) => (
               <div key={l} className="rounded-2xl border border-border bg-card/70 p-3 text-center backdrop-blur sm:p-4">
