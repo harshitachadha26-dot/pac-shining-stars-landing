@@ -337,10 +337,10 @@ function FounderSection() {
 /* ------------------- PROBLEM ------------------- */
 function ProblemSection() {
   const cards = [
-    { icon: "🔍", title: "Where does my child really shine?", body: "Hard to spot a natural spark amid endless academic checkboxes.", color: "bg-blush/50" },
-    { icon: "💸", title: "Which class is actually right?", body: "Hopping between schools and classes costs time, money — and interest.", color: "bg-sunshine/40" },
-    { icon: "📚", title: "Not too academic, not random play", body: "You want structure and purpose — without early-academic pressure.", color: "bg-sky/60" },
-    { icon: "🎤", title: "Confident & expressive, not just exam-ready", body: "Marks matter. So does speaking up, performing and self-belief.", color: "bg-leaf/40" },
+    { icon: "🔍", title: "What is my child good at?", body: "Their personality is forming, but with so many academic boxes to tick, their real spark is hard to spot.", color: "bg-blush/50" },
+    { icon: "💸", title: "What if I pick the wrong class?", body: "Shifting between preschools and activities costs time, money and your child's interest.", color: "bg-sunshine/40" },
+    { icon: "📚", title: "Not too academic — but not aimless", body: "You want structure and purpose, without pushing academics too early or settling for directionless play.", color: "bg-sky/60" },
+    { icon: "🎤", title: "Confident — not just exam-ready", body: "Marks matter. So does the courage to speak up, perform and feel proud of who they are.", color: "bg-leaf/40" },
   ];
   return (
     <section className="bg-cream/40 py-20 md:py-28">
@@ -370,6 +370,17 @@ function ProblemSection() {
             </Reveal>
           ))}
         </div>
+        <Reveal delay={200}>
+          <div className="mt-12 flex justify-center">
+            <a
+              href="#enquiry"
+              className="group inline-flex items-center justify-center gap-2 rounded-full bg-primary-gradient px-7 py-4 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]"
+            >
+              Find the Right Fit — Enquire
+              <span className="transition group-hover:translate-x-1">→</span>
+            </a>
+          </div>
+        </Reveal>
       </div>
     </section>
   );
