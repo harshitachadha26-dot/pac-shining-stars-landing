@@ -999,7 +999,8 @@ function Footer() {
             <h3 className="font-display text-base font-semibold">Quick Links</h3>
             <ul className="mt-4 space-y-2 text-sm opacity-80">
               <li><a href="#preschool" className="hover:opacity-100">Preschool</a></li>
-              <li><a href="#mia" className="hover:opacity-100">MIA Program</a></li>
+              <li><a href="#daycare" className="hover:opacity-100">Daycare</a></li>
+              <li><a href="#mia" className="hover:opacity-100">MIA Activities</a></li>
               <li><a href="#faq" className="hover:opacity-100">FAQs</a></li>
               <li><a href="#enquiry" className="hover:opacity-100">Contact</a></li>
             </ul>
