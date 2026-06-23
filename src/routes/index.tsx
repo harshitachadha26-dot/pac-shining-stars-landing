@@ -104,9 +104,8 @@ function Nav() {
   }, []);
 
   const links = [
-    { href: "#preschool", label: "Preschool" },
-    { href: "#daycare", label: "Daycare" },
-    { href: "#mia", label: "MIA Centre" },
+    { href: "#approach", label: "Approach" },
+    { href: "#preschool", label: "Programs" },
     { href: "#gallery", label: "Campus" },
     { href: "#faq", label: "FAQs" },
   ];
