@@ -310,38 +310,36 @@ function FounderSection() {
                 Hear From Our Founder
               </span>
               <h2 className="mt-3 font-display text-3xl text-foreground sm:text-4xl md:text-5xl">
-                Meet Bijal Gutka <span className="text-muted-foreground">(Bijal Chandaria)</span>
+                Meet <span className="text-gradient-brand">Bijal Gutka</span>
               </h2>
               <p className="mt-2 text-sm font-medium text-primary">
-                Founder & Director, PAC – Potential Activity Centre
+                Bijal Chandaria · Founder & Director, PAC
               </p>
-              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-foreground/80">
-                <p>
-                  Every child is gifted — but no two children learn or shine the same way. I founded PAC in 2004 to give children the freedom to discover their own strengths through the Multiple Intelligence approach.
-                </p>
-                <p>
-                  For 21 years, it has been our privilege to walk this journey with families in Mulund — and we'd love to welcome yours too.
-                </p>
-              </div>
               <blockquote className="mt-6 rounded-2xl border-l-4 border-coral bg-cream/60 p-5 font-display text-lg italic text-foreground">
                 "Every child has a unique potential. Our role is not to shape who they should become, but to help them discover who they already are."
-                <footer className="mt-2 text-sm not-italic text-muted-foreground">
-                  — Bijal Gutka (Bijal Chandaria), Founder & Director, PAC
-                </footer>
               </blockquote>
-              <div className="mt-6 flex flex-wrap gap-2 text-xs">
-                {[
-                  "30+ Years in Early Childhood Education",
-                  "Founded PAC in 2004",
-                  "21 Years of Nurturing Young Minds in Mulund ✨",
-                ].map((t) => (
-                  <span key={t} className="rounded-full border border-border bg-card px-3 py-1.5 font-medium text-foreground/80">
-                    {t}
-                  </span>
-                ))}
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-foreground/80">
+                <p>
+                  For over three decades I've worked with children and seen one thing again and again — every child is gifted, but no two shine in the same way.
+                </p>
+                <p>
+                  I founded PAC in 2004 to create a place where children aren't measured by academics alone, but are free to explore, discover and grow their own strengths.
+                </p>
+                <p>
+                  For 21 years it's been our privilege to guide thousands of Mulund families — and we'd love to welcome your child next.
+                </p>
+              </div>
+              <div className="mt-7">
+                <a
+                  href="#enquiry"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]"
+                >
+                  Talk to Our Team →
+                </a>
               </div>
             </div>
           </Reveal>
+
         </div>
       </div>
     </section>
