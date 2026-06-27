@@ -72,12 +72,10 @@ function PacLanding() {
       <Nav />
       <main>
         <HeroSection />
+        <ProgramsSection />
         <FounderSection />
         <ProblemSection />
         <DifferenceSection />
-        <PreschoolSection />
-        <DaycareSection />
-        <MiaSection />
         <ProcessSection />
         <GallerySection />
         <WhyChooseSection />
@@ -91,6 +89,7 @@ function PacLanding() {
     </div>
   );
 }
+
 
 /* ------------------- NAV ------------------- */
 function Nav() {
@@ -123,7 +122,7 @@ function Nav() {
           <img src={logoAsset.url} alt="PAC Mulund logo" className="h-10 w-10 md:h-12 md:w-12" />
           <div className="hidden sm:block">
             <div className="font-display text-lg leading-none font-bold text-primary">PAC</div>
-            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Mulund · Since 2004</div>
+            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Preschool · Day Care · MIA</div>
           </div>
         </a>
         <nav className="hidden items-center gap-7 lg:flex">
@@ -189,19 +188,35 @@ function HeroSection() {
         <Reveal>
           <div className="relative mx-auto max-w-5xl">
             <div className="absolute -inset-4 rounded-[2rem] bg-primary-gradient opacity-20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[1.5rem] border border-white/40 bg-black shadow-glow sm:rounded-[1.75rem]">
-              <div className="aspect-video">
-                <iframe
-                  className="h-full w-full"
-                  src="https://www.youtube.com/embed/NsXEC0vy1kQ?autoplay=1&mute=1&loop=1&playlist=NsXEC0vy1kQ&rel=0&modestbranding=1&playsinline=1"
-                  title="A Day in the Life at PAC Preschool, Daycare & MIA Centre, Mulund"
-                  loading="eager"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+            <div className="relative overflow-hidden rounded-[1.5rem] border border-white/40 bg-neutral-900 shadow-glow sm:rounded-[1.75rem]">
+              <div className="relative aspect-video w-full">
+                {/* Video placeholder — replace with self-hosted MP4 later */}
+                <video
+                  className="absolute inset-0 hidden h-full w-full object-cover"
+                  // src="/pac-hero.mp4"
+                  poster=""
+                  playsInline
+                  muted
+                  loop
+                  autoPlay
                 />
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-neutral-900 via-neutral-900 to-neutral-800 px-6 text-center text-white">
+                  <div className="grid h-16 w-16 place-items-center rounded-full bg-white/15 backdrop-blur transition hover:scale-105 sm:h-20 sm:w-20">
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="ml-1 h-7 w-7 sm:h-9 sm:w-9 text-white">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                  <span className="mt-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-sunshine">A Sneak Peek</span>
+                  <h2 className="mt-2 font-display text-2xl sm:text-3xl md:text-4xl">A Day in the Life at PAC</h2>
+                  <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/75 sm:text-base">
+                    See how a PAC day actually feels — the climbing and movement, the music and art, the library corners and the quiet confidence growing in every child. Then come see it in person.
+                  </p>
+                  <p className="mt-4 text-[11px] uppercase tracking-widest text-white/40">Video will be uploaded here</p>
+                </div>
               </div>
             </div>
           </div>
+
         </Reveal>
 
         <Reveal delay={120}>
@@ -295,38 +310,36 @@ function FounderSection() {
                 Hear From Our Founder
               </span>
               <h2 className="mt-3 font-display text-3xl text-foreground sm:text-4xl md:text-5xl">
-                Meet Bijal Gutka <span className="text-muted-foreground">(Bijal Chandaria)</span>
+                Meet <span className="text-gradient-brand">Bijal Gutka</span>
               </h2>
               <p className="mt-2 text-sm font-medium text-primary">
-                Founder & Director, PAC – Potential Activity Centre
+                Bijal Chandaria · Founder & Director, PAC
               </p>
-              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-foreground/80">
-                <p>
-                  Every child is gifted — but no two children learn or shine the same way. I founded PAC in 2004 to give children the freedom to discover their own strengths through the Multiple Intelligence approach.
-                </p>
-                <p>
-                  For 21 years, it has been our privilege to walk this journey with families in Mulund — and we'd love to welcome yours too.
-                </p>
-              </div>
               <blockquote className="mt-6 rounded-2xl border-l-4 border-coral bg-cream/60 p-5 font-display text-lg italic text-foreground">
                 "Every child has a unique potential. Our role is not to shape who they should become, but to help them discover who they already are."
-                <footer className="mt-2 text-sm not-italic text-muted-foreground">
-                  — Bijal Gutka (Bijal Chandaria), Founder & Director, PAC
-                </footer>
               </blockquote>
-              <div className="mt-6 flex flex-wrap gap-2 text-xs">
-                {[
-                  "30+ Years in Early Childhood Education",
-                  "Founded PAC in 2004",
-                  "21 Years of Nurturing Young Minds in Mulund ✨",
-                ].map((t) => (
-                  <span key={t} className="rounded-full border border-border bg-card px-3 py-1.5 font-medium text-foreground/80">
-                    {t}
-                  </span>
-                ))}
+              <div className="mt-6 space-y-4 text-[15px] leading-relaxed text-foreground/80">
+                <p>
+                  For over three decades I've worked with children and seen one thing again and again — every child is gifted, but no two shine in the same way.
+                </p>
+                <p>
+                  I founded PAC in 2004 to create a place where children aren't measured by academics alone, but are free to explore, discover and grow their own strengths.
+                </p>
+                <p>
+                  For 21 years it's been our privilege to guide thousands of Mulund families — and we'd love to welcome your child next.
+                </p>
+              </div>
+              <div className="mt-7">
+                <a
+                  href="#enquiry"
+                  className="inline-flex items-center gap-2 rounded-full bg-primary-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]"
+                >
+                  Talk to Our Team →
+                </a>
               </div>
             </div>
           </Reveal>
+
         </div>
       </div>
     </section>
@@ -417,138 +430,134 @@ function DifferenceSection() {
 }
 
 /* ------------------- PRESCHOOL ------------------- */
-function PreschoolSection() {
-  const features = [
-    { icon: "🧠", title: "8-Intelligence Early Learning Curriculum", desc: "Daily exposure across all eight intelligence areas — not just literacy & numeracy." },
-    { icon: "🛠️", title: "80% Practical, 20% Worksheets", desc: "Hands-on learning with real materials, real conversations, real discovery." },
-    { icon: "🎤", title: "Confidence & Communication First", desc: "Daily speaking, presenting, and expression opportunities for every child." },
-    { icon: "🏛️", title: "Purpose-Built Learning Spaces", desc: "Dedicated zones for art, music, movement, library, drama and nature play." },
-    { icon: "🚌", title: "15–18 Field Trips a Year", desc: "Real-world learning beyond classroom walls — community, nature, culture." },
+/* ------------------- PROGRAMS (3-in-1) ------------------- */
+function ProgramsSection() {
+  const programs = [
+    {
+      id: "preschool",
+      label: "Preschool · Ages 1.5–5",
+      title: "PAC 8-Intelligence Preschool",
+      desc: "More than school-readiness — the early foundation to think, speak, move, express, connect and discover where your child naturally shines.",
+      features: [
+        "8-intelligence curriculum — daily exposure across all eight areas, not just letters and numbers.",
+        "80% hands-on, 20% worksheets — real materials, real conversation, real discovery.",
+        "Confidence & communication first — daily speaking, presenting and expression.",
+        "Purpose-built rooms — for art, music, movement, library and nature play.",
+        "15–18 field trips a year — real-world learning beyond the classroom.",
+      ],
+      cta: "Enquire About Preschool",
+      image: gallery3.url,
+      bg: "bg-sky/30",
+      reverse: false,
+      accent: "bg-primary-gradient text-primary-foreground",
+    },
+    {
+      id: "daycare",
+      label: "Daycare · Ages 1.5–8",
+      title: "Daycare that cares — and keeps developing your child",
+      desc: "A safe, warm second home for the children of working parents — where your child is looked after with love, and still grows across all 8 intelligences every single day.",
+      features: [
+        "Secure, supervised & screen-free",
+        "Meals, naps & routines handled",
+        "The same 8-intelligence enrichment",
+        "Homework & school-pickup support",
+        "Regular updates for parents",
+      ],
+      cta: "Book a Free Trial Day",
+      image: gallery5.url,
+      bg: "bg-blush/30",
+      reverse: true,
+      accent: "bg-primary-gradient text-primary-foreground",
+    },
+    {
+      id: "mia",
+      label: "MIA Activity Centre · Ages 3–10",
+      title: "Multiple Intelligence Activities — 10–12 activities, one roof",
+      desc: "Sports, art, music, languages, rhythm, movement and performance — so your child explores widely and discovers what they truly love.",
+      features: [
+        "10–12 activities under one roof",
+        "Four activities every day",
+        "Joyful play-way learning",
+        "Real stage experience",
+        "Progress reports",
+      ],
+      cta: "Book a Free Trial Class",
+      image: gallery1.url,
+      bg: "bg-cream/40",
+      reverse: false,
+      accent: "bg-warm-gradient text-coral-foreground",
+    },
   ];
+
   return (
-    <section id="preschool" className="bg-sky/30 py-20 md:py-28">
+    <section id="preschool" className="bg-background py-20 md:py-28">
       <div className="container-pac">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-coral">PAC Preschool</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-coral">Our Programs</span>
             <h2 className="mt-3 font-display text-3xl text-foreground sm:text-4xl md:text-5xl">
-              PAC 8-Intelligence Preschool — <span className="text-gradient-brand">Mulund's Whole-Child Early Learning Program</span>
+              Three Programs, <span className="text-gradient-brand">One Campus</span>
             </h2>
             <p className="mt-5 text-muted-foreground">
-              More than school readiness — give your child the early foundation to think, speak, move, express, connect, and discover where they naturally shine.
+              One place for your child's whole early journey. Whether you need a foundation, full-day care, or activity-based discovery — PAC has a programme built on the same 8-intelligence philosophy.
             </p>
           </div>
         </Reveal>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f, i) => (
-            <Reveal key={f.title} delay={i * 60}>
-              <div className="h-full rounded-3xl border border-border bg-card p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-primary-gradient text-2xl text-primary-foreground shadow-soft">{f.icon}</div>
-                <h3 className="mt-5 font-display text-xl text-foreground">{f.title}</h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{f.desc}</p>
-              </div>
+
+        <div className="mt-14 space-y-10 md:space-y-16">
+          {programs.map((p) => (
+            <Reveal key={p.id}>
+              <article
+                id={p.id}
+                className={`overflow-hidden rounded-[2rem] border border-border ${p.bg} shadow-card`}
+              >
+                <div className={`grid items-stretch gap-0 md:grid-cols-2 ${p.reverse ? "md:[direction:rtl]" : ""}`}>
+                  <div className="relative md:[direction:ltr]">
+                    <div className="aspect-[4/3] h-full w-full md:aspect-auto md:min-h-[420px]">
+                      <img
+                        src={p.image}
+                        alt={p.title}
+                        loading="lazy"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="p-7 sm:p-10 md:p-12 md:[direction:ltr]">
+                    <span className="inline-flex rounded-full bg-card px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-primary shadow-soft">
+                      {p.label}
+                    </span>
+                    <h3 className="mt-4 font-display text-2xl text-foreground sm:text-3xl md:text-4xl">
+                      {p.title}
+                    </h3>
+                    <p className="mt-4 leading-relaxed text-muted-foreground">{p.desc}</p>
+                    <ul className="mt-6 space-y-3">
+                      {p.features.map((f) => (
+                        <li key={f} className="flex items-start gap-3 text-sm text-foreground/85 sm:text-[15px]">
+                          <span className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary/10 text-[11px] font-bold text-primary">✓</span>
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-7">
+                      <a
+                        href="#enquiry"
+                        className={`inline-flex items-center gap-2 rounded-full ${p.accent} px-6 py-3.5 text-sm font-semibold shadow-glow transition hover:translate-y-[-2px]`}
+                      >
+                        {p.cta} →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </Reveal>
           ))}
-        </div>
-        <div className="mt-10 text-center">
-          <a href="#enquiry" className="inline-flex items-center gap-2 rounded-full bg-primary-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]">
-            Enquire About Preschool Admission →
-          </a>
         </div>
       </div>
     </section>
   );
 }
 
-/* ------------------- DAYCARE ------------------- */
-function DaycareSection() {
-  const features = [
-    { icon: "🛡️", title: "Safe, Supervised & Screen-Free", desc: "A calm, warm environment where your child feels truly at home." },
-    { icon: "🍱", title: "Meals, Naps & Routines Handled", desc: "Nutritious food, restful sleep and gentle daily care — taken care of." },
-    { icon: "🧠", title: "Same 8-Intelligence Enrichment", desc: "Never just 'minding' — your child keeps developing every single day." },
-    { icon: "📚", title: "Homework & School-Pickup Support", desc: "Reliable after-school care for older children, with help when they need it." },
-    { icon: "📲", title: "Regular Parent Updates", desc: "Photos and notes — so you always know how your child's day went." },
-  ];
-  return (
-    <section id="daycare" className="bg-blush/30 py-20 md:py-28">
-      <div className="container-pac">
-        <Reveal>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-coral">PAC Daycare · Ages 1.5–8</span>
-            <h2 className="mt-3 font-display text-3xl text-foreground sm:text-4xl md:text-5xl">
-              Daycare That Cares — <span className="text-gradient-brand">And Keeps Developing Your Child</span>
-            </h2>
-            <p className="mt-5 text-muted-foreground">
-              A safe, warm second home for the children of working parents — where your child is looked after with love, and still grows across all 8 intelligences every single day.
-            </p>
-          </div>
-        </Reveal>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f, i) => (
-            <Reveal key={f.title} delay={i * 60}>
-              <div className="h-full rounded-3xl border border-border bg-card p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-warm-gradient text-2xl text-coral-foreground shadow-soft">{f.icon}</div>
-                <h3 className="mt-5 font-display text-xl text-foreground">{f.title}</h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{f.desc}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <a href="#enquiry" className="inline-flex items-center gap-2 rounded-full bg-primary-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]">
-            Book a Free Daycare Trial Day →
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
 
-/* ------------------- MIA ------------------- */
-function MiaSection() {
-  const features = [
-    { icon: "🏟️", title: "10–12 Activities, One Campus", desc: "Sports, art, music, languages, rhythm, movement & performance — all under one roof." },
-    { icon: "⏱️", title: "4 Activities a Day, 30 Minutes Each", desc: "Short, focused sessions that hold attention and build mastery." },
-    { icon: "🧸", title: "Play-Way Learning Method", desc: "Children explore through games and joyful play — never forced drills." },
-    { icon: "🎭", title: "Real Stage Experience", desc: "Performance opportunities that build confidence on stage and in life." },
-    { icon: "📈", title: "Progress Reports for Parents", desc: "Clear direction on where your child is shining and what to nurture next." },
-  ];
-  return (
-    <section id="mia" className="py-20 md:py-28">
-      <div className="container-pac">
-        <Reveal>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-coral">MIA Program</span>
-            <h2 className="mt-3 font-display text-3xl text-foreground sm:text-4xl md:text-5xl">
-              PAC Multiple Intelligence Activity (MIA) — <span className="text-gradient-brand">10–12 Activities Under One Roof</span>
-            </h2>
-            <p className="mt-5 text-muted-foreground">
-              Help your child explore sports, art, music, languages, rhythm, movement and performance under one roof.
-            </p>
-          </div>
-        </Reveal>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f, i) => (
-            <Reveal key={f.title} delay={i * 60}>
-              <div className="h-full rounded-3xl border border-border bg-card p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-warm-gradient text-2xl text-coral-foreground shadow-soft">{f.icon}</div>
-                <h3 className="mt-5 font-display text-xl text-foreground">{f.title}</h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{f.desc}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <a href="#enquiry" className="inline-flex items-center gap-2 rounded-full bg-warm-gradient px-7 py-3.5 text-sm font-semibold text-coral-foreground shadow-glow transition hover:translate-y-[-2px]">
-            Enquire About MIA Program →
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ------------------- PROCESS ------------------- */
 function ProcessSection() {
   const steps = [
     { n: "01", title: "We Understand Your Child First", desc: "A warm conversation about your child's personality, interests, and what you want to see grow." },
@@ -764,6 +773,8 @@ function EnquirySection() {
     const age = String(data.get("age") || "").trim();
     const phone = String(data.get("phone") || "").trim();
     const email = String(data.get("email") || "").trim();
+    const callback = String(data.get("callback") || "").trim();
+    const interests = data.getAll("interest").map(String);
     if (!parent) next.parent = "Please enter parent name";
     if (!child) next.child = "Please enter child name";
     if (!age) next.age = "Please enter child age";
@@ -771,10 +782,23 @@ function EnquirySection() {
     if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) next.email = "Please enter a valid email";
     setErrors(next);
     if (Object.keys(next).length === 0) {
+      const msg = [
+        `Hi PAC! I'd like to enquire.`,
+        ``,
+        `Parent: ${parent}`,
+        `Child: ${child} (${age})`,
+        `Phone: ${phone}`,
+        email ? `Email: ${email}` : "",
+        interests.length ? `Interested in: ${interests.join(", ")}` : "",
+        callback ? `Preferred callback: ${callback}` : "",
+      ].filter(Boolean).join("\n");
+      const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
       setSubmitted(true);
       form.reset();
     }
   };
+
 
   return (
     <section id="enquiry" className="bg-hero-gradient py-20 md:py-28">
@@ -843,8 +867,8 @@ function EnquirySection() {
 
                   <fieldset className="mt-5">
                     <legend className="mb-2 text-sm font-medium text-foreground">I'm interested in</legend>
-                    <div className="grid gap-2 sm:grid-cols-3">
-                      {["Day Care", "Preschool", "MIA Activity"].map((opt) => (
+                    <div className="grid gap-2 sm:grid-cols-2">
+                      {["Preschool", "Day Care", "MIA Activities", "Not Sure"].map((opt) => (
                         <label key={opt} className="flex cursor-pointer items-center gap-2 rounded-xl border border-border bg-background px-3 py-2.5 text-sm transition hover:border-primary/40 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
                           <input type="checkbox" name="interest" value={opt} className="h-4 w-4 accent-[var(--primary)]" />
                           <span>{opt}</span>
@@ -869,13 +893,17 @@ function EnquirySection() {
 
                   <button
                     type="submit"
-                    className="mt-7 w-full rounded-full bg-primary-gradient px-7 py-4 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]"
+                    className="mt-7 flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-7 py-4 text-sm font-semibold text-white shadow-glow transition hover:translate-y-[-2px]"
                   >
-                    Book My Free Campus Visit →
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                      <path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.4.1 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6a11.9 11.9 0 0 0 5.8 1.5h.1c6.6 0 11.9-5.4 11.9-12 0-3.2-1.2-6.2-3.5-8.4zM12 21.8c-1.8 0-3.6-.5-5.2-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 1 1 21.9 12 9.9 9.9 0 0 1 12 21.8zm5.4-7.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7 0a8 8 0 0 1-2.3-1.4 9 9 0 0 1-1.7-2.1c-.2-.3 0-.4.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1.1 1-1.1 2.5 1.1 3 1.3 3.2 2.2 3.4 5.4 4.8c.7.3 1.3.5 1.8.6.7.2 1.4.2 2 .1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/>
+                    </svg>
+                    Submit & Chat on WhatsApp
                   </button>
                   <p className="mt-3 text-center text-xs text-muted-foreground">
                     Your details are kept private. No spam — only PAC admissions will contact you.
                   </p>
+
                 </>
               )}
             </form>
