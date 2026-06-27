@@ -72,12 +72,10 @@ function PacLanding() {
       <Nav />
       <main>
         <HeroSection />
+        <ProgramsSection />
         <FounderSection />
         <ProblemSection />
         <DifferenceSection />
-        <PreschoolSection />
-        <DaycareSection />
-        <MiaSection />
         <ProcessSection />
         <GallerySection />
         <WhyChooseSection />
@@ -91,6 +89,7 @@ function PacLanding() {
     </div>
   );
 }
+
 
 /* ------------------- NAV ------------------- */
 function Nav() {
