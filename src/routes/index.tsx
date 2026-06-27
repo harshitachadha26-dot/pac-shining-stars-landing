@@ -122,7 +122,7 @@ function Nav() {
           <img src={logoAsset.url} alt="PAC Mulund logo" className="h-10 w-10 md:h-12 md:w-12" />
           <div className="hidden sm:block">
             <div className="font-display text-lg leading-none font-bold text-primary">PAC</div>
-            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Mulund · Since 2004</div>
+            <div className="text-[10px] uppercase tracking-widest text-muted-foreground">Preschool · Day Care · MIA</div>
           </div>
         </a>
         <nav className="hidden items-center gap-7 lg:flex">
