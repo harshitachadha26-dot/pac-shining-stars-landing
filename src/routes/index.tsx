@@ -867,8 +867,8 @@ function EnquirySection() {
 
                   <fieldset className="mt-5">
                     <legend className="mb-2 text-sm font-medium text-foreground">I'm interested in</legend>
-                    <div className="grid gap-2 sm:grid-cols-3">
-                      {["Day Care", "Preschool", "MIA Activity"].map((opt) => (
+                    <div className="grid gap-2 sm:grid-cols-2">
+                      {["Preschool", "Day Care", "MIA Activities", "Not Sure"].map((opt) => (
                         <label key={opt} className="flex cursor-pointer items-center gap-2 rounded-xl border border-border bg-background px-3 py-2.5 text-sm transition hover:border-primary/40 has-[:checked]:border-primary has-[:checked]:bg-primary/5">
                           <input type="checkbox" name="interest" value={opt} className="h-4 w-4 accent-[var(--primary)]" />
                           <span>{opt}</span>
@@ -893,13 +893,17 @@ function EnquirySection() {
 
                   <button
                     type="submit"
-                    className="mt-7 w-full rounded-full bg-primary-gradient px-7 py-4 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]"
+                    className="mt-7 flex w-full items-center justify-center gap-2 rounded-full bg-[#25D366] px-7 py-4 text-sm font-semibold text-white shadow-glow transition hover:translate-y-[-2px]"
                   >
-                    Book My Free Campus Visit →
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="h-5 w-5">
+                      <path d="M20.5 3.5A11.8 11.8 0 0 0 12 0C5.4 0 .1 5.4.1 12c0 2.1.6 4.2 1.6 6L0 24l6.2-1.6a11.9 11.9 0 0 0 5.8 1.5h.1c6.6 0 11.9-5.4 11.9-12 0-3.2-1.2-6.2-3.5-8.4zM12 21.8c-1.8 0-3.6-.5-5.2-1.4l-.4-.2-3.7 1 1-3.6-.2-.4A9.9 9.9 0 1 1 21.9 12 9.9 9.9 0 0 1 12 21.8zm5.4-7.4c-.3-.1-1.8-.9-2-1s-.5-.1-.7.1-.8 1-1 1.2-.4.2-.7 0a8 8 0 0 1-2.3-1.4 9 9 0 0 1-1.7-2.1c-.2-.3 0-.4.1-.6l.5-.5.3-.5c.1-.2 0-.4 0-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4s-1.1 1-1.1 2.5 1.1 3 1.3 3.2 2.2 3.4 5.4 4.8c.7.3 1.3.5 1.8.6.7.2 1.4.2 2 .1.6-.1 1.8-.7 2-1.5.3-.7.3-1.4.2-1.5-.1-.1-.3-.2-.6-.4z"/>
+                    </svg>
+                    Submit & Chat on WhatsApp
                   </button>
                   <p className="mt-3 text-center text-xs text-muted-foreground">
                     Your details are kept private. No spam — only PAC admissions will contact you.
                   </p>
+
                 </>
               )}
             </form>
