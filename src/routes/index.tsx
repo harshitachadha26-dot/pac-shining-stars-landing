@@ -188,19 +188,35 @@ function HeroSection() {
         <Reveal>
           <div className="relative mx-auto max-w-5xl">
             <div className="absolute -inset-4 rounded-[2rem] bg-primary-gradient opacity-20 blur-2xl" />
-            <div className="relative overflow-hidden rounded-[1.5rem] border border-white/40 bg-black shadow-glow sm:rounded-[1.75rem]">
-              <div className="aspect-video">
-                <iframe
-                  className="h-full w-full"
-                  src="https://www.youtube.com/embed/NsXEC0vy1kQ?autoplay=1&mute=1&loop=1&playlist=NsXEC0vy1kQ&rel=0&modestbranding=1&playsinline=1"
-                  title="A Day in the Life at PAC Preschool, Daycare & MIA Centre, Mulund"
-                  loading="eager"
-                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                  allowFullScreen
+            <div className="relative overflow-hidden rounded-[1.5rem] border border-white/40 bg-neutral-900 shadow-glow sm:rounded-[1.75rem]">
+              <div className="relative aspect-video w-full">
+                {/* Video placeholder — replace with self-hosted MP4 later */}
+                <video
+                  className="absolute inset-0 hidden h-full w-full object-cover"
+                  // src="/pac-hero.mp4"
+                  poster=""
+                  playsInline
+                  muted
+                  loop
+                  autoPlay
                 />
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-gradient-to-br from-neutral-900 via-neutral-900 to-neutral-800 px-6 text-center text-white">
+                  <div className="grid h-16 w-16 place-items-center rounded-full bg-white/15 backdrop-blur transition hover:scale-105 sm:h-20 sm:w-20">
+                    <svg viewBox="0 0 24 24" fill="currentColor" className="ml-1 h-7 w-7 sm:h-9 sm:w-9 text-white">
+                      <path d="M8 5v14l11-7z" />
+                    </svg>
+                  </div>
+                  <span className="mt-5 text-[11px] font-semibold uppercase tracking-[0.3em] text-sunshine">A Sneak Peek</span>
+                  <h2 className="mt-2 font-display text-2xl sm:text-3xl md:text-4xl">A Day in the Life at PAC</h2>
+                  <p className="mx-auto mt-3 max-w-xl text-sm leading-relaxed text-white/75 sm:text-base">
+                    See how a PAC day actually feels — the climbing and movement, the music and art, the library corners and the quiet confidence growing in every child. Then come see it in person.
+                  </p>
+                  <p className="mt-4 text-[11px] uppercase tracking-widest text-white/40">Video will be uploaded here</p>
+                </div>
               </div>
             </div>
           </div>
+
         </Reveal>
 
         <Reveal delay={120}>
