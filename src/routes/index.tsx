@@ -773,6 +773,8 @@ function EnquirySection() {
     const age = String(data.get("age") || "").trim();
     const phone = String(data.get("phone") || "").trim();
     const email = String(data.get("email") || "").trim();
+    const callback = String(data.get("callback") || "").trim();
+    const interests = data.getAll("interest").map(String);
     if (!parent) next.parent = "Please enter parent name";
     if (!child) next.child = "Please enter child name";
     if (!age) next.age = "Please enter child age";
@@ -780,10 +782,23 @@ function EnquirySection() {
     if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) next.email = "Please enter a valid email";
     setErrors(next);
     if (Object.keys(next).length === 0) {
+      const msg = [
+        `Hi PAC! I'd like to enquire.`,
+        ``,
+        `Parent: ${parent}`,
+        `Child: ${child} (${age})`,
+        `Phone: ${phone}`,
+        email ? `Email: ${email}` : "",
+        interests.length ? `Interested in: ${interests.join(", ")}` : "",
+        callback ? `Preferred callback: ${callback}` : "",
+      ].filter(Boolean).join("\n");
+      const url = `https://wa.me/${WHATSAPP}?text=${encodeURIComponent(msg)}`;
+      window.open(url, "_blank", "noopener,noreferrer");
       setSubmitted(true);
       form.reset();
     }
   };
+
 
   return (
     <section id="enquiry" className="bg-hero-gradient py-20 md:py-28">
