@@ -432,138 +432,134 @@ function DifferenceSection() {
 }
 
 /* ------------------- PRESCHOOL ------------------- */
-function PreschoolSection() {
-  const features = [
-    { icon: "🧠", title: "8-Intelligence Early Learning Curriculum", desc: "Daily exposure across all eight intelligence areas — not just literacy & numeracy." },
-    { icon: "🛠️", title: "80% Practical, 20% Worksheets", desc: "Hands-on learning with real materials, real conversations, real discovery." },
-    { icon: "🎤", title: "Confidence & Communication First", desc: "Daily speaking, presenting, and expression opportunities for every child." },
-    { icon: "🏛️", title: "Purpose-Built Learning Spaces", desc: "Dedicated zones for art, music, movement, library, drama and nature play." },
-    { icon: "🚌", title: "15–18 Field Trips a Year", desc: "Real-world learning beyond classroom walls — community, nature, culture." },
+/* ------------------- PROGRAMS (3-in-1) ------------------- */
+function ProgramsSection() {
+  const programs = [
+    {
+      id: "preschool",
+      label: "Preschool · Ages 1.5–5",
+      title: "PAC 8-Intelligence Preschool",
+      desc: "More than school-readiness — the early foundation to think, speak, move, express, connect and discover where your child naturally shines.",
+      features: [
+        "8-intelligence curriculum — daily exposure across all eight areas, not just letters and numbers.",
+        "80% hands-on, 20% worksheets — real materials, real conversation, real discovery.",
+        "Confidence & communication first — daily speaking, presenting and expression.",
+        "Purpose-built rooms — for art, music, movement, library and nature play.",
+        "15–18 field trips a year — real-world learning beyond the classroom.",
+      ],
+      cta: "Enquire About Preschool",
+      image: gallery3.url,
+      bg: "bg-sky/30",
+      reverse: false,
+      accent: "bg-primary-gradient text-primary-foreground",
+    },
+    {
+      id: "daycare",
+      label: "Daycare · Ages 1.5–8",
+      title: "Daycare that cares — and keeps developing your child",
+      desc: "A safe, warm second home for the children of working parents — where your child is looked after with love, and still grows across all 8 intelligences every single day.",
+      features: [
+        "Secure, supervised & screen-free",
+        "Meals, naps & routines handled",
+        "The same 8-intelligence enrichment",
+        "Homework & school-pickup support",
+        "Regular updates for parents",
+      ],
+      cta: "Book a Free Trial Day",
+      image: gallery5.url,
+      bg: "bg-blush/30",
+      reverse: true,
+      accent: "bg-primary-gradient text-primary-foreground",
+    },
+    {
+      id: "mia",
+      label: "MIA Activity Centre · Ages 3–10",
+      title: "Multiple Intelligence Activities — 10–12 activities, one roof",
+      desc: "Sports, art, music, languages, rhythm, movement and performance — so your child explores widely and discovers what they truly love.",
+      features: [
+        "10–12 activities under one roof",
+        "Four activities every day",
+        "Joyful play-way learning",
+        "Real stage experience",
+        "Progress reports",
+      ],
+      cta: "Book a Free Trial Class",
+      image: gallery1.url,
+      bg: "bg-cream/40",
+      reverse: false,
+      accent: "bg-warm-gradient text-coral-foreground",
+    },
   ];
+
   return (
-    <section id="preschool" className="bg-sky/30 py-20 md:py-28">
+    <section id="preschool" className="bg-background py-20 md:py-28">
       <div className="container-pac">
         <Reveal>
           <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-coral">PAC Preschool</span>
+            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-coral">Our Programs</span>
             <h2 className="mt-3 font-display text-3xl text-foreground sm:text-4xl md:text-5xl">
-              PAC 8-Intelligence Preschool — <span className="text-gradient-brand">Mulund's Whole-Child Early Learning Program</span>
+              Three Programs, <span className="text-gradient-brand">One Campus</span>
             </h2>
             <p className="mt-5 text-muted-foreground">
-              More than school readiness — give your child the early foundation to think, speak, move, express, connect, and discover where they naturally shine.
+              One place for your child's whole early journey. Whether you need a foundation, full-day care, or activity-based discovery — PAC has a programme built on the same 8-intelligence philosophy.
             </p>
           </div>
         </Reveal>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f, i) => (
-            <Reveal key={f.title} delay={i * 60}>
-              <div className="h-full rounded-3xl border border-border bg-card p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-primary-gradient text-2xl text-primary-foreground shadow-soft">{f.icon}</div>
-                <h3 className="mt-5 font-display text-xl text-foreground">{f.title}</h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{f.desc}</p>
-              </div>
+
+        <div className="mt-14 space-y-10 md:space-y-16">
+          {programs.map((p) => (
+            <Reveal key={p.id}>
+              <article
+                id={p.id}
+                className={`overflow-hidden rounded-[2rem] border border-border ${p.bg} shadow-card`}
+              >
+                <div className={`grid items-stretch gap-0 md:grid-cols-2 ${p.reverse ? "md:[direction:rtl]" : ""}`}>
+                  <div className="relative md:[direction:ltr]">
+                    <div className="aspect-[4/3] h-full w-full md:aspect-auto md:min-h-[420px]">
+                      <img
+                        src={p.image}
+                        alt={p.title}
+                        loading="lazy"
+                        className="h-full w-full object-cover"
+                      />
+                    </div>
+                  </div>
+                  <div className="p-7 sm:p-10 md:p-12 md:[direction:ltr]">
+                    <span className="inline-flex rounded-full bg-card px-3 py-1 text-[11px] font-semibold uppercase tracking-widest text-primary shadow-soft">
+                      {p.label}
+                    </span>
+                    <h3 className="mt-4 font-display text-2xl text-foreground sm:text-3xl md:text-4xl">
+                      {p.title}
+                    </h3>
+                    <p className="mt-4 leading-relaxed text-muted-foreground">{p.desc}</p>
+                    <ul className="mt-6 space-y-3">
+                      {p.features.map((f) => (
+                        <li key={f} className="flex items-start gap-3 text-sm text-foreground/85 sm:text-[15px]">
+                          <span className="mt-1 grid h-5 w-5 shrink-0 place-items-center rounded-full bg-primary/10 text-[11px] font-bold text-primary">✓</span>
+                          <span>{f}</span>
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="mt-7">
+                      <a
+                        href="#enquiry"
+                        className={`inline-flex items-center gap-2 rounded-full ${p.accent} px-6 py-3.5 text-sm font-semibold shadow-glow transition hover:translate-y-[-2px]`}
+                      >
+                        {p.cta} →
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </article>
             </Reveal>
           ))}
-        </div>
-        <div className="mt-10 text-center">
-          <a href="#enquiry" className="inline-flex items-center gap-2 rounded-full bg-primary-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]">
-            Enquire About Preschool Admission →
-          </a>
         </div>
       </div>
     </section>
   );
 }
 
-/* ------------------- DAYCARE ------------------- */
-function DaycareSection() {
-  const features = [
-    { icon: "🛡️", title: "Safe, Supervised & Screen-Free", desc: "A calm, warm environment where your child feels truly at home." },
-    { icon: "🍱", title: "Meals, Naps & Routines Handled", desc: "Nutritious food, restful sleep and gentle daily care — taken care of." },
-    { icon: "🧠", title: "Same 8-Intelligence Enrichment", desc: "Never just 'minding' — your child keeps developing every single day." },
-    { icon: "📚", title: "Homework & School-Pickup Support", desc: "Reliable after-school care for older children, with help when they need it." },
-    { icon: "📲", title: "Regular Parent Updates", desc: "Photos and notes — so you always know how your child's day went." },
-  ];
-  return (
-    <section id="daycare" className="bg-blush/30 py-20 md:py-28">
-      <div className="container-pac">
-        <Reveal>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-coral">PAC Daycare · Ages 1.5–8</span>
-            <h2 className="mt-3 font-display text-3xl text-foreground sm:text-4xl md:text-5xl">
-              Daycare That Cares — <span className="text-gradient-brand">And Keeps Developing Your Child</span>
-            </h2>
-            <p className="mt-5 text-muted-foreground">
-              A safe, warm second home for the children of working parents — where your child is looked after with love, and still grows across all 8 intelligences every single day.
-            </p>
-          </div>
-        </Reveal>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f, i) => (
-            <Reveal key={f.title} delay={i * 60}>
-              <div className="h-full rounded-3xl border border-border bg-card p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-warm-gradient text-2xl text-coral-foreground shadow-soft">{f.icon}</div>
-                <h3 className="mt-5 font-display text-xl text-foreground">{f.title}</h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{f.desc}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <a href="#enquiry" className="inline-flex items-center gap-2 rounded-full bg-primary-gradient px-7 py-3.5 text-sm font-semibold text-primary-foreground shadow-glow transition hover:translate-y-[-2px]">
-            Book a Free Daycare Trial Day →
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
 
-/* ------------------- MIA ------------------- */
-function MiaSection() {
-  const features = [
-    { icon: "🏟️", title: "10–12 Activities, One Campus", desc: "Sports, art, music, languages, rhythm, movement & performance — all under one roof." },
-    { icon: "⏱️", title: "4 Activities a Day, 30 Minutes Each", desc: "Short, focused sessions that hold attention and build mastery." },
-    { icon: "🧸", title: "Play-Way Learning Method", desc: "Children explore through games and joyful play — never forced drills." },
-    { icon: "🎭", title: "Real Stage Experience", desc: "Performance opportunities that build confidence on stage and in life." },
-    { icon: "📈", title: "Progress Reports for Parents", desc: "Clear direction on where your child is shining and what to nurture next." },
-  ];
-  return (
-    <section id="mia" className="py-20 md:py-28">
-      <div className="container-pac">
-        <Reveal>
-          <div className="mx-auto max-w-3xl text-center">
-            <span className="text-xs font-semibold uppercase tracking-[0.25em] text-coral">MIA Program</span>
-            <h2 className="mt-3 font-display text-3xl text-foreground sm:text-4xl md:text-5xl">
-              PAC Multiple Intelligence Activity (MIA) — <span className="text-gradient-brand">10–12 Activities Under One Roof</span>
-            </h2>
-            <p className="mt-5 text-muted-foreground">
-              Help your child explore sports, art, music, languages, rhythm, movement and performance under one roof.
-            </p>
-          </div>
-        </Reveal>
-        <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
-          {features.map((f, i) => (
-            <Reveal key={f.title} delay={i * 60}>
-              <div className="h-full rounded-3xl border border-border bg-card p-7 shadow-soft transition hover:-translate-y-1 hover:shadow-card">
-                <div className="grid h-14 w-14 place-items-center rounded-2xl bg-warm-gradient text-2xl text-coral-foreground shadow-soft">{f.icon}</div>
-                <h3 className="mt-5 font-display text-xl text-foreground">{f.title}</h3>
-                <p className="mt-2 leading-relaxed text-muted-foreground">{f.desc}</p>
-              </div>
-            </Reveal>
-          ))}
-        </div>
-        <div className="mt-10 text-center">
-          <a href="#enquiry" className="inline-flex items-center gap-2 rounded-full bg-warm-gradient px-7 py-3.5 text-sm font-semibold text-coral-foreground shadow-glow transition hover:translate-y-[-2px]">
-            Enquire About MIA Program →
-          </a>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-/* ------------------- PROCESS ------------------- */
 function ProcessSection() {
   const steps = [
     { n: "01", title: "We Understand Your Child First", desc: "A warm conversation about your child's personality, interests, and what you want to see grow." },
